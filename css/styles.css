@@ -28,3 +28,20 @@ p {
   margin-left: 35%;
   font-family: Poiret One;
 }
+
+.social {
+  margin-left: 45%;
+  margin-bottom: 10%;
+}
+.fab {
+  color: #000000;
+}
+/* .fab {
+  font-size: 2em;
+  color: #000;
+  margin-top: 50%;
+  margin-left: 13%;
+  margin-right: 25%;
+  position: absolute;
+  z-index: 2;
+} */
