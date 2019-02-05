@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+.background {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.main-space {
+  background-color: #e6e6e6;
+  border-radius: 5;
+  width: 40%;
+  height: 500px;
+  margin-left: 30%;
+  border-radius: 5%;
+}
+
+h1 {
+  text-align: center;
+  z-index: 1;
+  font-family: Poiret One;
+}
+
+/* Footer */
+
+p {
+  margin-top: 5%;
+  margin-left: 35%;
+  font-family: Poiret One;
+}
