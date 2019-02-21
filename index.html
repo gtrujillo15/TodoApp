@@ -1,31 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>To Do List</title>
     <link rel="shortcut icon" href="img/favicon.todoapp.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/all.min.css">
-  </head>
-  <body>
+</head>
+<body>
     <div class="background">
-      <div class="main-space">
-        <div class="to-do">
-          <h1>To Do List</h1>
-      </div>
+        <div class="main-space">
+            <h1>To Do List:</h1>
+            <input onkeyup="checkEnter(event)" id="newItemInput" type="text" placeholder="New Item"> <button onclick="addItem()">Submit</button>
+            <ul>
+
+            </ul>
+        </div>
     </div>
 
-    <div class="footer">
-      <p>Gabriela Trujillo</p>
-      <div class="social">
-      <a href="https://www.facebook.com/gabriela.trujillo.98" target="_blank"><i class="fab fa-facebook-f"></a></i>
-      <a href="https://www.linkedin.com/in/gabriela-trujillo-b8872682/" target="_blank"><i class="fab fa-linkedin-in"></a></i>
-      <a href="https://www.instagram.com/ohhigaby/" target="_blank"><i class="fab fa-instagram"></a></i>
-      <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-  </div>
+    <script>
 
+        function checkEnter(event) {
+            event.code === 'Enter' ? addItem() : console.log('press enter')
+            if (event.code === 'Enter') {
+                console.log(event, 'event');
+                addItem();
+            }
+        }
+        function addItem() {
+            const itemInput = document.getElementById('newItemInput');
+            if (!itemInput.value) {
+                return;
+            }
+            console.log('new item', itemInput.value );
+            const newItem = create();
+            const deleteButton = createDelete();
+            deleteButton.innerText = 'X';
+            newItem.appendChild(deleteButton);
+            newItem.innerText = itemInput.value;
+            const ul = document.getElementsByTagName('ul')[0];
+            ul.appendChild(newItem);
+            itemInput.value = '';
+        }
 
-  </body>
+        function create() {
+            return document.createElement('li');
+        }
+
+        function createDelete() {
+            return document.createElement('button');
+        }
+
+        function deleteItem( button) {
+            console.log('button', button);
+        }
+
+    </script>
+</body>
 </html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
 .background {
   background-color: #fff;
@@ -18,30 +18,13 @@
 h1 {
   text-align: center;
   z-index: 1;
-  font-family: Poiret One;
+  font-family: Work Sans, sans-serif;
 }
 
-/* Footer */
-
-p {
-  margin-top: 5%;
+#newItemInput, li {
   margin-left: 35%;
-  font-family: Poiret One;
 }
 
-.social {
-  margin-left: 45%;
-  margin-bottom: 10%;
+li {
+ font-family: Work Sans, sans-serif;
 }
-.fab {
-  color: #000000;
-}
-/* .fab {
-  font-size: 2em;
-  color: #000;
-  margin-top: 50%;
-  margin-left: 13%;
-  margin-right: 25%;
-  position: absolute;
-  z-index: 2;
-} */
