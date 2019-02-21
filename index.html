@@ -42,6 +42,7 @@
             newItem.innerText = itemInput.value;
             newItem.innerText = itemInput.value + "   //  " + new Date().toLocaleDateString();
             const ul = document.getElementsByTagName('ul')[0];
+            // const completeItem = document.getElementById("newItemInput");
             ul.appendChild(newItem);
             itemInput.value = '';
             newItem.appendChild(deleteButton);
@@ -59,7 +60,16 @@
             console.log('button', button);
         }
 
-        
+        /*completeItem.addEventListener("click", function() {
+            if (deleteButton === 'click') {
+                // move li to completed ul list
+            }   else {
+
+            }
+        })
+        */
+
+/// commented items are me trying to figure out the addeventlistener
 
 
     </script>
