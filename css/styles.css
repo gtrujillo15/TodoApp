@@ -26,6 +26,10 @@ h1 {
 li {
  font-family: Work Sans, sans-serif;
  margin-left: 15%;
+ padding-bottom: 2%;
 }
 
+deleteButton {
+  padding-left: 10%;
+}
 /* text-decoration: line-through; */

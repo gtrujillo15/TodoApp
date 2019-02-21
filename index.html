@@ -14,7 +14,7 @@
             <ul>
             </ul>
             <h1>Completed:</h1>
-            <div id="completedItems">
+            <div id="completedItemsUl">
             <ul></ul>
             </div>
         </div>
@@ -40,7 +40,7 @@
             const deleteButton = createDelete();
             deleteButton.innerText = " " + 'Complete';
             newItem.innerText = itemInput.value;
-            newItem.innerText = itemInput.value + " // " + new Date().toLocaleDateString();
+            newItem.innerText = itemInput.value + "   //  " + new Date().toLocaleDateString();
             const ul = document.getElementsByTagName('ul')[0];
             ul.appendChild(newItem);
             itemInput.value = '';
@@ -55,10 +55,12 @@
             return document.createElement('button');
         }
 
-        function deleteItem( button) {
+        function deleteItem(button) {
             console.log('button', button);
-
         }
+
+        
+
 
     </script>
 </body>
