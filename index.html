@@ -41,7 +41,7 @@
             deleteButton.innerText = 'X';
             newItem.appendChild(deleteButton);
             newItem.innerText = itemInput.value;
-            newItem.innerText = itemInput.value + " // " + new Date();
+            newItem.innerText = itemInput.value + " // " + new Date().toLocaleDateString();
             const ul = document.getElementsByTagName('ul')[0];
             ul.appendChild(newItem);
             itemInput.value = '';

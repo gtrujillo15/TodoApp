@@ -16,16 +16,16 @@ body {
 
 h1 {
   text-align: center;
-  z-index: 1;
   font-family: Work Sans, sans-serif;
 }
 
-#newItemInput, li {
+#newItemInput {
   margin-left: 35%;
 }
 
 li {
  font-family: Work Sans, sans-serif;
+ margin-left: 15%;
 }
 
 /* text-decoration: line-through; */
