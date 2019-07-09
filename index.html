@@ -1,77 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>To Do List</title>
     <link rel="shortcut icon" href="img/favicon.todoapp.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="background">
         <div class="main-space">
             <h1>To Do List:</h1>
-            <input onkeyup="checkEnter(event)" id="newItemInput" type="text" placeholder="New Item"> <button onclick="addItem()">Submit</button>
+            <input onkeyup="checkEnter(event)" id="newItemInput" type="text" placeholder="New Item"> <button
+                onclick="addItem()">Submit</button>
             <ul>
             </ul>
-            <h1>Completed:</h1>
+            <!-- <h1>Completed:</h1>
             <div id="completedItemsUl">
-            <ul></ul>
-            </div>
+                <ul></ul>
+            </div> -->
         </div>
     </div>
 
-    <script>
+    <script src="js/scripts.js"></script>
 
-        
-        function checkEnter(event) {
-            event.code === 'Enter' ? addItem() : console.log('press enter')
-            if (event.code === 'Enter') {
-                console.log(event, 'event');
-                addItem();
-            }
-        }
-        function addItem() {
-            const itemInput = document.getElementById('newItemInput');
-            if (!itemInput.value) {
-                return;
-            }
-            console.log('new item', itemInput.value );
-            const newItem = create();
-            const deleteButton = createDelete();
-            deleteButton.innerText = " " + 'Complete';
-            newItem.innerText = itemInput.value;
-            newItem.innerText = itemInput.value + "   //  " + new Date().toLocaleDateString();
-            const ul = document.getElementsByTagName('ul')[0];
-            // const completeItem = document.getElementById("newItemInput");
-            ul.appendChild(newItem);
-            itemInput.value = '';
-            newItem.appendChild(deleteButton);
-        }
-
-        function create() {
-            return document.createElement('li');
-        }
-
-        function createDelete() {
-            return document.createElement('button');
-        }
-
-        function deleteItem(button) {
-            console.log('button', button);
-        }
-
-        /*completeItem.addEventListener("click", function() {
-            if (deleteButton === 'click') {
-                // move li to completed ul list
-            }   else {
-
-            }
-        })
-        */
-
-/// commented items are me trying to figure out the addeventlistener
-
-
-    </script>
 </body>
+
 </html>
